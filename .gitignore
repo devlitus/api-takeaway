@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+.idea/.gitignore
+.idea/api.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/php.xml
+.idea/phpunit.xml
+.idea/vcs.xml
+vendor/
+server.net.http
