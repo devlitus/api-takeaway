@@ -1,13 +1,13 @@
 <?php
 
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
+
+use App\Action\Clients\ClientAction;
 use Slim\App;
+use Slim\Routing\RouteCollectorProxy;
 
 return function (App $app) {
-    $app->get('/', function (ServerRequestInterface $request, ResponseInterface $response) {
-        $response->getBody()->write('Hello, World!');
-
-        return $response;
+    $app->group('/v1', function (RouteCollectorProxy $group) {
+        $group->get('/users', ClientAction::class);
     });
+
 };

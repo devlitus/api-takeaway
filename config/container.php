@@ -13,7 +13,7 @@ return [
     App::class => function (ContainerInterface $container) {
         AppFactory::setContainer($container);
         $app = AppFactory::create();
-        $app->setBasePath('/api');
+        $app->setBasePath('/api-takeaway');
         return $app;
     },
 
@@ -28,6 +28,19 @@ return [
             (bool)$settings['log_errors'],
             (bool)$settings['log_error_details']
         );
+    },
+    PDO::class => function (ContainerInterface $container) {
+        $settings = $container->get(Configuration::class)->getArray('db');
+
+        $host = $settings['host'];
+        $dbname = $settings['database'];
+        $username = $settings['username'];
+        $password = $settings['password'];
+        $charset = $settings['charset'];
+        $flags = $settings['flags'];
+        $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
+
+        return new PDO($dsn, $username, $password, $flags);
     },
 
 ];

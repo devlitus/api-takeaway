@@ -28,5 +28,26 @@ $settings['error_handler_middleware'] = [
     // Display error details in error log
     'log_error_details' => true,
 ];
+$settings['db'] = [
+    'driver' => 'mysql',
+    'host' => 'localhost',
+    'username' => 'carles',
+    'database' => 'takeaway',
+    'password' => 'carles',
+    'charset' => 'utf8',
+    'collation' => 'utf8_general_ci',
+    'flags' => [
+        // Turn off persistent connections
+        PDO::ATTR_PERSISTENT => false,
+        // Enable exceptions
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        // Emulate prepared statements
+        PDO::ATTR_EMULATE_PREPARES => true,
+        // Set default fetch mode to array
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        // Set character set
+        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8 COLLATE utf8_general_ci'
+    ],
+];
 
 return $settings;
