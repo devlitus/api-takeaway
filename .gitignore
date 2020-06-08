@@ -8,4 +8,5 @@
 .idea/phpunit.xml
 .idea/vcs.xml
 vendor/
+upload/
 server.net.http

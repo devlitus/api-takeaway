@@ -4,6 +4,9 @@ use Selective\Config\Configuration;
 use Slim\App;
 use Slim\Factory\AppFactory;
 use Slim\Middleware\ErrorMiddleware;
+use Slim\Psr7\UploadedFile;
+
+//use Slim\Psr7\UploadedFile;
 
 return [
     Configuration::class => function () {
@@ -42,5 +45,7 @@ return [
 
         return new PDO($dsn, $username, $password, $flags);
     },
-
+    UploadedFile::class => function(ContainerInterface $container) {
+        $directory = $container->get(Configuration::class)->getArray('upload_directory');
+    }
 ];

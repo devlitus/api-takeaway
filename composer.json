@@ -1,12 +1,13 @@
 {
   "require": {
-    "slim/slim": "4.*",
-    "slim/http": "^1.0",
-    "slim/psr7": "^1.0",
     "ext-json": "*",
+    "ext-pdo": "*",
     "php-di/php-di": "^6.1",
     "selective/config": "^0.2.0",
-    "ext-pdo": "*"
+    "selective/validation": "^0.10.0",
+    "slim/http": "^1.0",
+    "slim/psr7": "^1.0",
+    "slim/slim": "4.*"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.1"

@@ -4,34 +4,38 @@
 namespace App\Domain\Clients\Data;
 
 
+use App\Util\UploadFile;
+
+
 class ClientData
 {
     /**
      * @var int
      */
-    public $id;
+    public int $id;
     /**
      * @var string
      */
-    public $username;
+    public string $username;
+    /**
+     * @var string
+     */
+    public string $email;
     /**
      * @var string
      */
     public $password;
     /**
-     * @var string
+     * @var UploadFile
      */
     public $image;
+
     /**
      * @var string
      */
-    public $date_create;
+    public string $activate;
     /**
      * @var string
      */
-    public $activate;
-    /**
-     * @var string
-     */
-    public $role;
+    public string $role;
 }

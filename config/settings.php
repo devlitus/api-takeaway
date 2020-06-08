@@ -13,6 +13,7 @@ $settings = [];
 $settings['root'] = dirname(__DIR__);
 $settings['temp'] = $settings['root'] . '/tmp';
 $settings['public'] = $settings['root'] . '/public';
+$settings['upload_directory'] = $settings['root'] . '/upload';
 
 // Error Handling Middleware settings
 $settings['error_handler_middleware'] = [
