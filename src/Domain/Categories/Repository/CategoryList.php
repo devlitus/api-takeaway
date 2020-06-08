@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\Domain\Clients\Repository;
+namespace App\Domain\Categories\Repository;
 
 
 use PDO;
 
-class ClientList
+class CategoryList
 {
     /**
      * @var PDO
@@ -14,7 +14,7 @@ class ClientList
     private PDO $connection;
 
     /**
-     * ClientList constructor.
+     * CategoryList constructor.
      * @param PDO $connection
      */
     public function __construct(PDO $connection)
@@ -25,9 +25,9 @@ class ClientList
     /**
      * @return array
      */
-    public function listClient(): array
+    public function categoryList(): array
     {
-        $statement = "SELECT * FROM clients";
+        $statement = "SELECT * FROM categories;";
         $result = $this->connection->prepare($statement);
         $result->execute();
         return $result->fetchAll();
