@@ -9,26 +9,26 @@ class DishesData
     /**
      * @var int
      */
-    private int $id;
+    public int $id;
     /**
      * @var string
      */
-    private string $title;
+    public string $title;
     /**
      * @var string
      */
-    private string $description;
-    private $image;
+    public string $description;
+    public $image;
     /**
      * @var float
      */
-    private float $price;
+    public float $price;
     /**
      * @var string
      */
-    private string $activate;
+    public string $activate;
     /**
      * @var int
      */
-    private int $id_category;
+    public int $id_category;
 }

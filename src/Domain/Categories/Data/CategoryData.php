@@ -9,13 +9,13 @@ class CategoryData
     /**
      * @var int
      */
-    private int $id;
+    public int $id;
     /**
      * @var string
      */
-    private string $category;
+    public string $category;
     /**
      * @var string
      */
-    private string $description;
+    public string $description;
 }

@@ -6,9 +6,6 @@ namespace App\Domain\Clients\Service;
 
 use App\Domain\Clients\Repository\ClientCreator;
 use App\Exception\ValidationException;
-use App\Util\UploadFile;
-use Slim\Psr7\UploadedFile;
-
 
 class CreatorClient
 {
